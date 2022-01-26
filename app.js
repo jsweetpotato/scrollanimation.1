@@ -25,11 +25,11 @@ listItem.forEach(item => {
 
   let newString = '';
   let itemText = item.children[0].innerText.split('');
-  console.log(itemText);
   itemText.map(letter => {
     newString += letter == ' ' ? `<span class="gap"></span>` : `<span>${letter}</span>`;
   });
   item.innerHTML = newString;
+  item.childNodes.forEach(letter => { letter.ariaHidden = "true" });
 
   observer.observe(item); // observe 메서드로 target elem을 추가한다. 요소 관찰 중지는 IntersectionObserver.unobserve(target)을 실행한다.
 });
