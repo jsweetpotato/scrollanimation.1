@@ -3,4 +3,4 @@
 ## Animation where letters appear when scrolling. <br>
 
 [tutorial](https://youtu.be/FWQSYONeIqk)<br>
-[view page](https://github.com/jsweetpotato/scrollanimation.1.io)
+[view page](https://jsweetpotato.github.io/scrollanimation.1.io/)
