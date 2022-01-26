@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+
+:root{
+  --clr-one: #ffebbe;
+  --clr-two: #161616;
+
+  --ff-primary: 'Playfair Display',
+  serif;
+}
+
+*,
+*::before
+*::after{
+  box-sizing: border-box;
+}
+
+body,
+h1,
+ul,
+li,
+span{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.6;
+  background-color: var(--clr-one);
+  color: var(--clr-two);
+}
+
+section{
+  padding: 3rem 0 ;
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+header,
+.container{
+  margin-inline: auto;
+  width: min(90%, 84rem);
+}
+
+.container{
+  display: flex;
+}
+
+
+@media (min-width:40rem){
+  body{
+    font-size: 3.2rem;
+  }
+
+  .container{
+    justify-content: flex-end;
+  }
+
+  ul{
+    justify-content: flex-end;
+  }
+}
+
+
+h1{
+  font-weight: 900;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width:40rem) {
+  ul{
+    margin-inline: auto;
+  }
+
+  h1{
+    font-size: 1.2em;
+  }
+}
+
+.reveal-animation li{
+  overflow: hidden;
+  display: flex;
+}
+
+.reveal-animation li span {
+  display: block;
+  transform: translateY(200%);
+}
+
+.reveal-animation li span.--active {
+  transform: translateY(0%);
+  transition: 1s ease-out;
+}
+
+.reveal-animation li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.gap{
+  width: 1rem;
+}
